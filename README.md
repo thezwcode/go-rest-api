@@ -86,7 +86,7 @@ go run *.go
 [PostMan](https://www.getpostman.com/downloads/) is used for testing the API, by sending requests and receiving responses.
 
 After setting up PostMan, create a new request. Set the request URL to be ```http://localhost:8080```
-The following requests are valid:
+The following requests are valid (note that there are no initial inputs into the table; only able to search objects after creating them):
 ```
 GET: /search/{objectType}/{id}
 POST: /update/{objectType}, send JSON body with attributes other than id
