@@ -1,7 +1,7 @@
 # go-rest-api
 Attempt to build RestAPI
 
-#API Setup
+## API Setup
 
 This application was build with Mac OS Catalina 10.1.15 and assumes that [Golang](https://golang.org/doc/install)v1.13.4 and [PostgreSQL](https://www.postgresql.org/download/)v12.1 are already set up. For more information on setting them up, click on the respective links.
 [VSCode](https://code.visualstudio.com/download) was used as the code editor, with Go extension installed.
@@ -19,11 +19,9 @@ go get -u github.com/golang/gddo/httputil/header
 
 ```
 
-##Database configuration
+## Database configuration
 
-First, we need to configure the database setup. Ensure that PostgreSQL server is running. 
-
-Using a superuser is not recommended. A new dbuser can be created the command line with this command:
+First, we need to configure the database setup. Ensure that PostgreSQL server is running. Using a superuser is not recommended. A new dbuser can be created the command line with this command:
 
 ```
 createuser {dbuser} --pwprompt --createdb
@@ -52,14 +50,17 @@ Connect to the database:
 ```
 postgres=> \connect {dbname}
 ```
-
 Exit:
 ```
 \q
 ```
-##Test database connection
-
-Create a .env file in $GOPATH directory with these attributes (port number is default PostgreSQL port number):
+## Database connection
+Log into PostgreSQL: 
+```
+psql postgres -U {dbuser}
+\connect {dbname}
+```
+Create a .env file in go-rest-api directory with these attributes (port number is default PostgreSQL port number):
 '''
 APP_DB_USERNAME = "{dbuser}"
 APP_DB_PASSWORD = "{dbuser password}"
@@ -68,21 +69,19 @@ APP_DB_NAME = "{dbname}"
 SSL_MODE="disable"
 PORT="5432"
 '''
-Log into PostgreSQL: 
-```
-psql postgres -U {dbuser}
-\connect {dbname}
-```
-##Running the server
-Navigate to file directory with go files inside:
+
+## Running the server
+Navigate to go-rest-api folder:
 ```
 cd $GOPATH
 cd go-rest-api
 ```
 Enter this command in the command line to run the server:
+```
 go run *.go
+```
 
-##PostMan
+## PostMan
 
 [PostMan](https://www.getpostman.com/downloads/) is used for testing the API, by sending requests and receiving responses.
 
@@ -97,7 +96,7 @@ To test requests without JSON, let the header remain as any option other than JS
 
 Add "application/json".
 
-###JSON strings
+### JSON strings
 
 To send requests in JSON strings, go to "Body" tab and input JSON object. Only GET, POST and PUT requests work, with their specified endpoints, as mentioned above.
 
