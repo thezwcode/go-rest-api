@@ -8,7 +8,7 @@ This application was build with Mac OS Catalina 10.1.15 and assumes that [Golang
 
 In the command line, use command ```go env GOPATH``` to check $GOPATH directory. For my machine, $GOPATH=/Users/{username}/go.
 
-If you want to develop the project in another directory, create the directory, navigate there and use command ```export GOPATH=$PWD``` to change $GOPATH to that directory.
+If you want to develop the project in another directory, create the directory, navigate there and use command ```export GOPATH=$PWD``` to change $GOPATH to that directory. Clone this folder into the $GOPATH directory.
 
 In $GOPATH directory, enter:
 ```
