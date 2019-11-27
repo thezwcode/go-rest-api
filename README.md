@@ -1,5 +1,4 @@
 # go-rest-api
-Attempt to build RestAPI
 
 ## API Setup
 
