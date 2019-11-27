@@ -61,14 +61,14 @@ psql postgres -U {dbuser}
 \connect {dbname}
 ```
 Create a .env file in go-rest-api directory with these attributes (port number is default PostgreSQL port number):
-'''
+```
 APP_DB_USERNAME = "{dbuser}"
 APP_DB_PASSWORD = "{dbuser password}"
 APP_DB_NAME = "{dbname}"
 
 SSL_MODE="disable"
 PORT="5432"
-'''
+```
 
 ## Running the server
 Navigate to go-rest-api folder:
